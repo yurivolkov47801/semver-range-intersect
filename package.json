@@ -1,0 +1,17 @@
+{
+  "name": "semver-range-intersect",
+  "version": "0.1.0",
+  "description": "Computes the intersection of two Semantic Versioning range expressions to determine compatibility.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
