@@ -1,6 +1,6 @@
 {
   "name": "semver-range-intersect",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Computes the intersection of two Semantic Versioning range expressions to determine compatibility.",
   "type": "module",
   "main": "src/index.js",
