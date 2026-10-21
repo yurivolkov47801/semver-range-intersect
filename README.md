@@ -20,3 +20,10 @@ Dependency resolution tools repeatedly need to answer "do these two constraints 
 ## Edge cases
 
 Partial versions like `^1.2` and `~2` are expanded to comparator pairs with an upper bound of `<next-0` (for example `^1.2` becomes `>=1.2.0 <1.3.0-0`), which excludes prereleases of the next minor or major. Build metadata is parsed but ignored for ordering, per the SemVer spec. Bare versions without an operator (`1.2.3`) are treated as exact pins: `>=1.2.3 <=1.2.3`.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
